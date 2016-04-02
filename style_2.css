@@ -1,5 +1,5 @@
 body{
-	margin: 0px;
+	min-width: 1000px;
 }
 * {
 	margin: 0;
@@ -15,8 +15,8 @@ body{
     src: url(fonts/Roboto-thin.ttf);
    }
 @font-face {
-    font-family: Roboto-regular; /* Имя шрифта */
-    src: url(fonts/Roboto-regular.ttf); /* Путь к файлу со шрифтом */
+    font-family: Roboto-regular;
+    src: url(fonts/Roboto-regular.ttf);
    }
 .wrapper {
 	height: 800px;
@@ -49,7 +49,7 @@ body{
 	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 }
 
-.slide1 {background-image: url(images/maxresdefault.jpg);}
+.slide1 {background-image: url(images/maxresdefault.jpg); height: 800px;}
 .slide2 {background-image: url(images/1.jpg);}
 .slide3 {background-image: url(images/2.jpg);}
 .slide4 {background-image: url(images/3.jpg);}
@@ -170,15 +170,12 @@ label[for="slide4"] {
 	font-size: 18pt;
 	text-align: justify;
 	color: #282828;
+	padding: 25px 0;
 }
 
-p {
-	margin: 25px 0;
-}
-
-p:first-letter {
-    font-family: Roboto-thin; /* Гарнитура шрифта первой буквы */
-    font-size: 400%; /* Размер шрифта первого символа */
+.text_box:first-letter {
+    font-family: Roboto-thin;
+    font-size: 400%;
     float: left;
     display: inline-block;
     margin: -13px 0px 0px 0px;
@@ -268,4 +265,8 @@ p:first-letter {
     background: #ffffff;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.selected {
+	border: 2px solid red;
 }
