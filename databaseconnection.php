@@ -25,7 +25,7 @@ include("DB.php");
 
         </h1>
         <?php
-        include("index.html");
+       // include("index.html");
         ?>
         <p><!--Информация(текст) о событие-->
             <?php

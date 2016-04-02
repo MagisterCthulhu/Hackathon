@@ -1,6 +1,12 @@
 <?php
 
 class DB {
+ public $Login = array(
+     "admin" => "123456",
+     "root" => "123456",
+ );
+
+
     function  GetHead($id)
     {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
@@ -12,6 +18,7 @@ class DB {
         {
             print $row['name'] . "\t";
         }
+
     }
     function  GetText($id)
     {
@@ -97,12 +104,26 @@ class DB {
             print $row['pic4'] . "\t";
         }
     }
-    function  PutData($name,$text,$videosrc,$pic1,$pic2,$pic3,$pic4)
+
+    function  PutData($name,$text,$videosrc,$picbackground,$pic1,$pic2,$pic3,$pic4)
     {
+        $name = "'".$name."'";
+        $text = "'".$text."'";
+        $videosrc = "'".$videosrc."'";
+        $pic1background = "'".$picbackground."'";
+        $pic1 = "'".$pic1."'";
+        $pic2 = "'".$pic2."'";
+        $pic3 = "'".$pic3."'";
+        $pic4 = "'".$pic4."'";
+
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
         $pdo = new PDO($dsn,$user,$password);
-        $pdo->query("INSERT INTO content(name,text,videosrc,pic1,pic2,pic3,pic4) VALUES( " );
+        $pdo->query("INSERT INTO content(name,text,videosrc,picbackground,pic1,pic2,pic3,pic4) VALUES( ".$name.",".$text.",".$videosrc.",".$pic1background.",".$pic1.",".$pic2.",".$pic3.",".$pic4.")");
+    }
+    function LogIn($username, $password)
+    {
+
     }
 }
