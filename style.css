@@ -1,0 +1,42 @@
+.info_block{
+	width: 780px;
+	height: 1000px;
+}
+.button_angle_up{
+	width: 32px;
+	height: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	display: fixed;
+	top: 0;
+}
+.button_angle_down{
+	width: 32px;
+	height: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	display: fixed;
+	top: 0;
+}
+.img_in_info_block{
+	width: 290px;
+	height: 290px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.img-video_row{
+	width: 310px;
+	height: 360px;
+	overflow: auto;
+	float: left;
+	background-image: url(images/kosmos.jpg);
+}
+.text_row{
+	width: 450px;
+	height: 360px;
+	overflow: auto;
+	float: right;
+}
+body{
+	margin: 0px;
+}
