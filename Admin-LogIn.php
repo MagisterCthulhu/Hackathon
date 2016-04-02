@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include ("DB.php");
     $q = new DB();
     if(isset($_POST['name']) && (isset ($_POST['password'])))

@@ -105,22 +105,26 @@ class DB {
         }
     }
 
-    function  PutData($name,$text,$videosrc,$picbackground,$pic1,$pic2,$pic3,$pic4)
+    function PutData($name,$text,$videosrc,$picbackground,$pic1,$pic2,$pic3,$pic4,$date)
     {
         $name = "'".$name."'";
         $text = "'".$text."'";
         $videosrc = "'".$videosrc."'";
-        $pic1background = "'".$picbackground."'";
+        $picbackground = "'".$picbackground."'";
         $pic1 = "'".$pic1."'";
         $pic2 = "'".$pic2."'";
         $pic3 = "'".$pic3."'";
         $pic4 = "'".$pic4."'";
 
+
+
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
         $pdo = new PDO($dsn,$user,$password);
-        $pdo->query("INSERT INTO content(name,text,videosrc,picbackground,pic1,pic2,pic3,pic4) VALUES( ".$name.",".$text.",".$videosrc.",".$pic1background.",".$pic1.",".$pic2.",".$pic3.",".$pic4.")");
+        $st = "INSERT INTO content(name,text,videosrc,picbackground,pic1,pic2,pic3,pic4,date) VALUES( ".$name.",".$text.",".$videosrc.",".$picbackground.",".$pic1.",".$pic2.",".$pic3.",".$pic4.", ".$date.")";
+        //print_r($st);
+        $pdo->query($st);
     }
     function LogIn($username, $password)
     {

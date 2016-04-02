@@ -1,14 +1,21 @@
 <?php
-include(DB.php);
+include("DB.php");
+session_start();
+$q = new DB();
+$q->PutData('test','test','','','','','','',456);
 if(!empty($_SESSION['name']))
     {
         if(isset($_POST['name']) && isset($_POST['text']) )
         {
-            
+            //echo $_POST['name'];
+            $q = new DB();
+            $q->PutData($_POST['name'],$_POST['text'],$_POST['videosrc'],$_POST['picbackground'],$_POST["pic1"],$_POST["pic2"],$_POST["pic3"],$_POST["pic4"],$_POST["date"]);
         }
     }
-
-?>
+else{
+    header ('Location: Admin-LogIn.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +66,14 @@ if(!empty($_SESSION['name']))
             <div class="form-group">
                 <label for="exampleInputPassword1">Ссылка на изображение темы №4</label>
                 <input type="text" name="pic4" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Ссылка на изображение темы №4</label>
+                <input type="text" name="pic4" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Дата события</label>
+                <input type="text" name="date" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
             </div>
             <button type="submit" class="btn btn-default">Принять</button>
         </form>
