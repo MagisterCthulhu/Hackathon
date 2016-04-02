@@ -3,18 +3,11 @@
     $q = new DB();
     if(isset($_POST['name']) && (isset ($_POST['password'])))
     {
-        /*foreach($q->Login as $name => $password)
-        {
-            //print $name . '' . $password;
-            if($data == password)
-            {
-
-            }
-        }*/
-
         if(array_key_exists($_POST['name'], $q->Login)){
-            if($q->Login[$_POST['name']] == $_POST['password']){
-                echo 'enter';
+            if($q->Login[$_POST['name']] == $_POST['password'])
+            {
+                header ('Location: Administration.php');
+                exit();
             }
         }
     }
