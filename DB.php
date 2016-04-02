@@ -126,8 +126,13 @@ class DB {
         //print_r($st);
         $pdo->query($st);
     }
-    function LogIn($username, $password)
+    function SelectAll()
     {
-
+        $dsn = 'mysql:host=localhost;dbname=tuniverse';
+        $user = 'root';
+        $password = '';
+        $pdo = new PDO($dsn,$user,$password);
+        $str = $pdo->query("SELECT * FROM content");
+        return $str;
     }
 }

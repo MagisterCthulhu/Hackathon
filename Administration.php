@@ -6,12 +6,9 @@ if(!empty($_SESSION['name'])) {
         header('Location: Add.php');
         exit();
     }
-    //$q = new DB();
-    //$q = $q->querry("SELECT * FROM content");
-    foreach($row as $q)
-    {
+    $q = new DB();
+    $q = $q->SelectAll();
 
-    }
 }
 ?>
 
@@ -43,15 +40,39 @@ if(!empty($_SESSION['name'])) {
     <table class="table">
         <thead>
         <tr>
-            <th>Имя</th>
-            <th>Фамилия</th>
-            <th>Почта</th>
+            <th>id</th>
+            <th>name</th>
+            <th>text</th>
+            <th>videosrc</th>
+            <th>background</th>
+            <th>pic1</th>
+            <th>pic2</th>
+            <th>pic3</th>
+            <th>pic4</th>
+            <th>date</th>
+            <th>Change</th>
         </tr>
         </thead>
         <tbody>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+        <?php
+            foreach($q as $row)
+            {
+                echo "<tr>";
+                echo "<td>".$row['id']."</td>>";
+                echo "<td>".$row['name']."</td>>";
+                echo "<td>".$row['text']."</td>>";
+                echo "<td>".$row['videosrc']."</td>>";
+                echo "<td>".$row['picbackground']."</td>>";
+                echo "<td>".$row['pic1']."</td>>";
+                echo "<td>".$row['pic2']."</td>>";
+                echo "<td>".$row['pic3']."</td>>";
+                echo "<td>".$row['pic4']."</td>>";
+                echo "<td>".$row['date']."</td>>";
+                echo '<td><button type="submit" class="btn btn-default">Update</button></td>';
+                echo "</tr>";
+            }
+
+        ?>
         </tbody>
     </table>
 </div>

@@ -36,8 +36,8 @@ else{
     <form method="post" align="center" class="form-signin">
         <form role="form">
             <div class="form-group">
-                <label for="exampleInputEmail1">Введите заголовок темы</label>
-                <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Введите адрес электронной почты">
+                <label >Введите заголовок темы</label>
+                <input type="text" name="name" class="form-control"  placeholder="Введите адрес электронной почты">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Введите текст темы</label>
