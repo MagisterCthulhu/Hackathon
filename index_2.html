@@ -1,10 +1,14 @@
 <!DOCTYPE>
 <html>
 <head>
-	<meta charset="utf-8">
 	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name = "viewport" content = "user-scalable=no, width=device-width">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="stylesheet" type="text/css" href="style_2.css">
 	<script type="text/javascript" src="js.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 </head>
 <body>
 	<div><!--Блок с картинками и видео-->
@@ -30,7 +34,28 @@
 			<div class="header">HEADER</div>
 		</div>
 	</div>
-	<div class="timeline"><!--TIMELINE-->
+	<div class="timeline">
+		<ul id="timeline">
+			<li>
+				<div class="item selected" id="1"></div>
+			</li>
+			<li>
+				<div class="item" id="2"></div>
+			</li>
+			<li>
+				<div class="item" id="3"></div>
+			</li>
+			<li>
+				<div class="item" id="4"></div>
+			</li>
+			<li>
+				<div class="item" id="5"></div>
+			</li>
+			<li>
+				<div class="item" id="6"></div>
+			</li>
+		</ul>
+		<div class="clearout"></div>
 	</div>
 	<div class="text_box"><!--Информация о событие-->
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -47,5 +72,14 @@
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 	<div><!--ПОДВАЛ--></div>
+	<script type="text/javascript">
+		$(window).load(function() {
+	    	$("#timeline").flexisel({
+	    	enableResponsiveBreakpoints: true,
+	    	visibleItems: 5,
+	    	clone:false
+    	})
+});
+</script>
 </body>
 </html>
