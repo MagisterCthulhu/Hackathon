@@ -49,7 +49,7 @@ body{
 	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 }
 
-.slide1 {background-image: url(images/maxresdefault.jpg); height: 800px;}
+.slide1 {background-image: url(images/maxresdefault.jpg);}
 .slide2 {background-image: url(images/1.jpg);}
 .slide3 {background-image: url(images/2.jpg);}
 .slide4 {background-image: url(images/3.jpg);}
@@ -96,7 +96,7 @@ body{
 #slide2:checked ~ .controls label:nth-of-type(2),
 #slide3:checked ~ .controls label:nth-of-type(3),
 #slide4:checked ~ .controls label:nth-of-type(4) {
-	background: #282828;
+	border: 2px solid green;
 }
 
 .wrapper label {
@@ -156,6 +156,7 @@ label[for="slide4"] {
 	vertical-align: middle;
 	z-index: 2;
 	font-family: Roboto-thin;
+	cursor: default;
 }
 
 .goOut {
@@ -223,19 +224,11 @@ label[for="slide4"] {
     float:left;
     margin:0px;
     padding:0px;
-    cursor:pointer;
+    cursor: default;
     position:relative;
     line-height:0px;
 }
-.nbs-flexisel-item img {
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    max-width:100px;
-    max-height:45px;
-}
+
 
 .nbs-flexisel-nav-left,
 .nbs-flexisel-nav-right {
@@ -265,8 +258,9 @@ label[for="slide4"] {
     background: #ffffff;
     margin-top: 40px;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .selected {
-	border: 2px solid red;
+	border: 2px solid green;
 }
