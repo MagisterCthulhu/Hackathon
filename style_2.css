@@ -10,6 +10,14 @@ body{
 	box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Roboto-thin;
+    src: url(fonts/Roboto-thin.ttf);
+   }
+@font-face {
+    font-family: Roboto-regular; /* Имя шрифта */
+    src: url(fonts/Roboto-regular.ttf); /* Путь к файлу со шрифтом */
+   }
 .wrapper {
 	height: 800px;
 	position: relative;
@@ -80,10 +88,7 @@ body{
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
-	-webkit-transition: background ease-in-out .5s;
-	-moz-transition: background ease-in-out .5s;
-	-o-transition: background ease-in-out .5s;
-	transition: background ease-in-out .5s;
+
 }
 
 .wrapper label:hover, 
@@ -91,13 +96,16 @@ body{
 #slide2:checked ~ .controls label:nth-of-type(2),
 #slide3:checked ~ .controls label:nth-of-type(3),
 #slide4:checked ~ .controls label:nth-of-type(4) {
+	background: #282828;
+}
+
+.wrapper label {
 	background-image:url(http://habrastorage.org/files/3f2/628/bd5/3f2628bd58c8452db516195cb0c9bfc9.jpg);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: 200%;
 }
 
 .wrapper label:after {
-	border: 2px solid #ddd;
 	content: " ";
 	display: block;
 	height: 48px;
@@ -134,9 +142,31 @@ body{
 	display: table-cell;
 	vertical-align: middle;
 	z-index: 2;
+	font-family: Roboto-thin;
 }
 
 .goOut {
 	transform: translateY(-800px);
 	transition: transform 1s 0s;
 }
+
+.text_box {
+	width: 1000px;
+	font-family: Roboto-regular;
+	margin: 0 auto;
+	font-size: 18pt;
+	text-align: justify;
+	color: #282828;
+}
+
+p {
+	margin: 25px 0;
+}
+
+p:first-letter {
+    font-family: Roboto-thin; /* Гарнитура шрифта первой буквы */
+    font-size: 400%; /* Размер шрифта первого символа */
+    float: left;
+    display: inline-block;
+    margin: -13px 0px 0px 0px;
+   }
