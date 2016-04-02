@@ -49,10 +49,10 @@ body{
 	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 }
 
-.slide1 {}
-.slide2 {}
-.slide3 {}
-.slide4 {}
+.slide1 {background-image: url(images/maxresdefault.jpg);}
+.slide2 {background-image: url(images/1.jpg);}
+.slide3 {background-image: url(images/2.jpg);}
+.slide4 {background-image: url(images/3.jpg);}
 
 #slide1:checked ~ .slider > .slide1,
 #slide2:checked ~ .slider > .slide2,
@@ -103,6 +103,19 @@ body{
 	background-image:url(http://habrastorage.org/files/3f2/628/bd5/3f2628bd58c8452db516195cb0c9bfc9.jpg);
 	background-repeat: no-repeat;
 	background-size: 200%;
+}
+
+label[for="slide1"] {
+  	background-image: url(images/maxresdefault.jpg);
+}
+label[for="slide2"] {
+  	background-image: url(images/1.jpg);
+}
+label[for="slide3"] {
+  	background-image: url(images/2.jpg);
+}
+label[for="slide4"] {
+  	background-image: url(images/3.jpg);
 }
 
 .wrapper label:after {
@@ -169,4 +182,13 @@ p:first-letter {
     float: left;
     display: inline-block;
     margin: -13px 0px 0px 0px;
+   }
+   .timeline{
+   	width: 100%;
+   	height: 100px;
+   	background-color: black;
+   	position: absolute;
+   	top: 700px;
+   	z-index: 4;
+   	opacity: 0.9;
    }
