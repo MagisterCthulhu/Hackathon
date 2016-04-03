@@ -11,29 +11,28 @@
 	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 </head>
 <body>
-	<div><!--Блок с картинками и видео-->
-		<div class="wrapper">
-			<input type="radio" name="point" id="slide1" checked>
-			<input type="radio" name="point" id="slide2">
-			<input type="radio" name="point" id="slide3">
-			<input type="radio" name="point" id="slide4">
-			<div class="slider">
-				<div class="slides slide1"><img src="images/maxresdefault.jpg"></img></div>
-				<div class="slides slide2"><img src="images/1.jpg"></img></div>
-				<div class="slides slide3"><img src="images/2.jpg"></img></div>
-				<div class="slides slide4"><iframe src="https://www.youtube.com/embed/y0SRvr93nuU" frameborder="0" allowfullscreen></iframe><!--<img src="images/3.jpg">--></img></div>
-			</div>
-			<div class="controls">
-				<label for="slide1"><img class="mini" src="images/maxresdefault.jpg"></img></label>
-				<label for="slide2"><img class="mini" src="images/1.jpg"></img></label>
-				<label for="slide3"><img class="mini" src="images/2.jpg"></img></label>
-				<label for="slide4"><img class="mini" src="images/youtube-1.png"></img></label>
-			</div>
+	<div class="wrapper">
+		<input type="radio" name="point" id="slide1" checked>
+		<input type="radio" name="point" id="slide2">
+		<input type="radio" name="point" id="slide3">
+		<input type="radio" name="point" id="slide4">
+		<div class="slider">
+			<div class="slides slide1"><img src="images/maxresdefault.jpg"></img></div>
+			<div class="slides slide2"><img src="images/1.jpg"></img></div>
+			<div class="slides slide3"><img src="images/2.jpg"></img></div>
+			<div class="slides slide4"><iframe src="https://www.youtube.com/embed/y0SRvr93nuU" frameborder="0" allowfullscreen></iframe><!--<img src="images/3.jpg">--></img></div>
 		</div>
-		<div class="shadow" onclick="goOut()">
-			<div class="header" onselectstart="return false" onmousedown="return false">HEADER</div>
+		<div class="controls">
+			<label for="slide1"><img class="mini" src="images/maxresdefault.jpg"></img></label>
+			<label for="slide2"><img class="mini" src="images/1.jpg"></img></label>
+			<label for="slide3"><img class="mini" src="images/2.jpg"></img></label>
+			<label for="slide4"><img class="mini" src="images/youtube-1.png"></img></label>
 		</div>
 	</div>
+	<div class="shadow" onclick="goOut()">
+		<div class="header" onselectstart="return false" onmousedown="return false">HEADER</div>
+	</div>
+	<div class="arrowBack" onclick="getOverHere()"></div>
 	<div class="timeline">
 		<ul id="timeline">
 			<li>
@@ -71,15 +70,15 @@
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</div>
-	<div><!--ПОДВАЛ--></div>
+	<div class="footer"><!--ПОДВАЛ--></div>
 	<script type="text/javascript">
 		$(window).load(function() {
 	    	$("#timeline").flexisel({
 	    	enableResponsiveBreakpoints: true,
 	    	visibleItems: 5,
 	    	clone:false
-    	})
-});
-</script>
+    		})
+		});
+	</script>
 </body>
 </html>

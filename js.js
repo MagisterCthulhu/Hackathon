@@ -1,7 +1,14 @@
 function goOut () {
 	var x = document.getElementsByClassName("shadow");
 	x[0].classList.add('goOut');
-
+	var y = document.getElementsByClassName("arrowBack");
+	window.setTimeout(function(){
+		y[0].classList.add('visible_first');
+		window.setTimeout(function(){
+			y[0].classList.remove('visible_first');
+			y[0].classList.add('visible');
+		}, 1000);
+	}, 1000)
 }
 
 function selectItem (sender) {
@@ -11,4 +18,11 @@ function selectItem (sender) {
 		x[0].classList.remove('selected');
 		sender.classList.add('selected');
 	}
+}
+
+function getOverHere () {
+	var x = document.getElementsByClassName("goOut");
+	x[0].classList.remove('goOut');
+	var y = document.getElementsByClassName("visible");
+	y[0].classList.remove('visible');
 }
