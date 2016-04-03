@@ -8,7 +8,7 @@ if(!empty($_SESSION['name']))
         {
             //echo $_POST['name'];
             $q = new DB();
-            $q->PutData($_POST['name'],$_POST['text'],$_POST['videosrc'],$_POST['picbackground'],$_POST["pic1"],$_POST["pic2"],$_POST["pic3"],$_POST["pic4"],$_POST["date"]);
+            $q->PutData($_POST['name'],$_POST['text'],$_POST['videosrc'],$_POST["pic1"],$_POST["pic2"],$_POST["pic3"],$_POST["date"]);
             header ('Location: Administration.php');
             exit();
         }
@@ -50,10 +50,6 @@ else{
                 <input type="text" name="videosrc" class="form-control" id="exampleInputEmail1">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Ссылка на изображение заднего фона</label>
-                <input type="text" name="picbackground" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group">
                 <label for="exampleInputEmail1">Ссылка на изображение темы №1</label>
                 <input type="text" name="pic1" class="form-control" id="exampleInputEmail1">
             </div>
@@ -64,10 +60,6 @@ else{
             <div class="form-group">
                 <label for="exampleInputEmail1">Ссылка на изображение темы №3</label>
                 <input type="text" name="pic3" class="form-control" id="exampleInputEmail1">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Ссылка на изображение темы №4</label>
-                <input type="text" name="pic4" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Дата события</label>

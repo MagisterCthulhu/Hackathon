@@ -6,25 +6,21 @@ $r = (int)$_GET['id'];
 if(!empty($_SESSION['name']))
 {
     $s = $q->SelectID($r);
-    foreach($s as $row)
-    {
-        $_id =  $row['id'];
-        $_name = $row['name'];
-        $_text = $row['text'];
-        $_videosrc = $row['videosrc'];
-        $_background = $row['picbackground'];
-        $_pic1 = $row['pic1'];
-        $_pic2 = $row['pic2'];
-        $_pic3 = $row['pic3'];
-        $_pic4 = $row['pic4'];
-        $_date = $row['date'];
-    }
+
+        $_id =  $s['id'];
+        $_name = $s['name'];
+        $_text = $s['text'];
+        $_videosrc = $s['videosrc'];
+        $_pic1 = $s['pic1'];
+        $_pic2 = $s['pic2'];
+        $_pic3 = $s['pic3'];
+        $_date = $s['date'];
 
     if(isset($_POST['name']) && isset($_POST['text']) && isset($_POST['date']) )
     {
         //echo $_POST['name'];
         $q = new DB();
-        $q->Update($_POST['name'],$_POST['text'],$_POST['videosrc'],$_POST['picbackground'],$_POST["pic1"],$_POST["pic2"],$_POST["pic3"],$_POST["pic4"],$_POST["date"],$r);
+        $q->Update($_POST['name'],$_POST['text'],$_POST['videosrc'],$_POST["pic1"],$_POST["pic2"],$_POST["pic3"],$_POST["date"],$r);
         header ('Location: Administration.php');
         exit();
     }
@@ -67,10 +63,6 @@ else{
                 <input type="text" name="videosrc" class="form-control" id="exampleInputEmail1" value="<?php echo $_videosrc; ?>" >
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Ссылка на изображение заднего фона</label>
-                <input type="text" name="picbackground" class="form-control" id="exampleInputPassword1" value="<?php echo $_background; ?>">
-            </div>
-            <div class="form-group">
                 <label for="exampleInputEmail1">Ссылка на изображение темы №1</label>
                 <input type="text" name="pic1" class="form-control" id="exampleInputEmail1" value="<?php echo $_pic1;?> ">
             </div>
@@ -83,10 +75,6 @@ else{
                 <input type="text" name="pic3" class="form-control" id="exampleInputEmail1" value="<?php echo $_pic3;?>">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Ссылка на изображение темы №4</label>
-                <input type="text" name="pic4" class="form-control" id="exampleInputPassword1" value="<?php echo $_pic4;?>">
-            </div>
-            <div class="form-group">
                 <label for="exampleInputPassword1">Дата события</label>
                 <input type="text" name="date" class="form-control" id="exampleInputPassword1" placeholder="*Обязательное поле для заполнения" value="<?php echo $_date;?>">
             </div>
@@ -96,8 +84,6 @@ else{
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<?php
-$_POST['text'] = 'asdasd';
-?>
+
 </body>
 </html>

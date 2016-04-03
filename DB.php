@@ -44,18 +44,6 @@ class DB {
             print $row['videosrc'] . "\t";
         }
     }
-    function  GetBackground($id)
-    {
-        $dsn = 'mysql:host=localhost;dbname=tuniverse';
-        $user = 'root';
-        $password = '';
-        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
-        $str = $pdo->query("SELECT picbackground FROM content WHERE id = ".$id);
-        foreach ($str as $row)
-        {
-            print $row['picbackground'] . "\t";
-        }
-    }
     function  GetPicture1($id)
     {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
@@ -92,36 +80,22 @@ class DB {
             print $row['pic3'] . "\t";
         }
     }
-    function  GetPicture4($id)
-    {
-        $dsn = 'mysql:host=localhost;dbname=tuniverse';
-        $user = 'root';
-        $password = '';
-        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
-        $str = $pdo->query("SELECT pic4 FROM content WHERE id = ".$id);
-        foreach ($str as $row)
-        {
-            print $row['pic4'] . "\t";
-        }
-    }
 
-    function PutData($name,$text,$videosrc,$picbackground,$pic1,$pic2,$pic3,$pic4,$date)
+    function PutData($name,$text,$videosrc,$pic1,$pic2,$pic3,$date)
     {
         $name = "'".$name."'";
         $text = "'".$text."'";
         $videosrc = "'".$videosrc."'";
-        $picbackground = "'".$picbackground."'";
         $pic1 = "'".$pic1."'";
         $pic2 = "'".$pic2."'";
         $pic3 = "'".$pic3."'";
-        $pic4 = "'".$pic4."'";
 
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
         $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $pdo->exec("set names utf8");
-        $st = "INSERT INTO content(name,text,videosrc,picbackground,pic1,pic2,pic3,pic4,date) VALUES( ".$name.",".$text.",".$videosrc.",".$picbackground.",".$pic1.",".$pic2.",".$pic3.",".$pic4.", ".$date.")";
+        $st = "INSERT INTO content(name,text,videosrc,pic1,pic2,pic3,date) VALUES( ".$name.",".$text.",".$videosrc.",".$pic1.",".$pic2.",".$pic3.", ".$date.")";
         //print_r($st);
         $pdo->query($st);
     }
@@ -166,21 +140,19 @@ class DB {
         }
         return $data;
     }
-    function Update($name,$text,$videosrc,$picbackground,$pic1,$pic2,$pic3,$pic4,$date,$id)
+    function Update($name,$text,$videosrc,$pic1,$pic2,$pic3,$date,$id)
     {
         $name = "'".$name."'";
         $text = "'".$text."'";
         $videosrc = "'".$videosrc."'";
-        $picbackground = "'".$picbackground."'";
         $pic1 = "'".$pic1."'";
         $pic2 = "'".$pic2."'";
         $pic3 = "'".$pic3."'";
-        $pic4 = "'".$pic4."'";
 
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
         $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
-        $pdo->query("UPDATE content SET name =".$name.", text = ".$text. ", videosrc = ".$videosrc.", picbackground =".$picbackground.", pic1 =".$pic1. ", pic2 = ".$pic2.", pic3 = ".$pic3.", pic4 = ".$pic4. ", date =".$date."  WHERE content.id =".$id );
+        $pdo->query("UPDATE content SET name =".$name.", text = ".$text. ", videosrc = ".$videosrc.", pic1 =".$pic1. ", pic2 = ".$pic2.", pic3 = ".$pic3. ", date =".$date."  WHERE content.id =".$id );
     }
 }

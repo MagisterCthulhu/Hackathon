@@ -6,11 +6,9 @@ $r = (int)$_GET['id'];
 if(!empty($_SESSION['name']))
 {
     $s = $q->SelectID($r);
-    foreach($s as $row)
-    {
-        $_name = $row['name'];
-        $_date = $row['date'];
-    }
+        $_name = $s['name'];
+        $_date = $s['date'];
+
 
     if(isset($_POST['delete']) )
     {

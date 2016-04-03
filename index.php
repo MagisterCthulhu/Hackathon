@@ -23,21 +23,21 @@
     <input type="radio" name="point" id="slide3">
     <input type="radio" name="point" id="slide4">
     <div class="slider">
-        <div class="slides slide1"><img src="images/maxresdefault.jpg"></div>
-        <div class="slides slide2"><img src="images/1.jpg"></div>
-        <div class="slides slide3"><img src="images/2.jpg"></div>
-        <div class="slides slide4"><iframe src="https://www.youtube.com/embed/y0SRvr93nuU" frameborder="0" allowfullscreen></iframe><!--<img src="images/3.jpg">--></img></div>
+        <div class="slides slide1"><img src=""></div>
+        <div class="slides slide2"><img src=""></div>
+        <div class="slides slide3"><img src=""></div>
+        <div class="slides slide4"><iframe src="" frameborder="0" allowfullscreen></iframe><!--<img src="images/3.jpg">--></img></div>
     </div>
     <div class="controls">
-        <label for="slide1"><img class="mini" src="images/maxresdefault.jpg"></label>
-        <label for="slide2"><img class="mini" src="images/1.jpg"></label>
-        <label for="slide3"><img class="mini" src="images/2.jpg"></label>
-        <label for="slide4"><img class="mini" src="images/youtube-1.png"></label>
+        <label for="slide1"><img class="mini" src=""></label>
+        <label for="slide2"><img class="mini" src=""></label>
+        <label for="slide3"><img class="mini" src=""></label>
+        <label for="slide4"><img class="mini" src=""></label>
     </div>
 </div>
 <div class="upper" onclick="goOut()">
     <div class="shadow"></div>
-    <div class="header" onselectstart="return false" onmousedown="return false">BIG BANG</div>
+    <div class="header" onselectstart="return false" onmousedown="return false"></div>
 </div>
 <div class="arrowBack" onclick="getOverHere()"></div>
 <div class="timeline">
@@ -66,14 +66,7 @@
     <div class="clearout"></div>
 </div>
 <div class="text_box">
-    <p><?php
-    foreach($data as $row)
-    {
-        $d = new DB();
-        $d = $d->GetText(2);
-        echo $d;
-    }
-    ?></p>
+
 </div>
 <div class="footer"><!--ПОДВАЛ-->
     <a href="Admin-LogIn.php"><img src="images/lock.png" class="lock"></a>
@@ -84,17 +77,9 @@
             enableResponsiveBreakpoints: true,
             visibleItems: 5,
             clone:false
-        })
-    });
-
-    function getContent(){
-        $.ajax({
-            url: 'ajax/getData.php?id=' + getIdSelection(),
-            success: function(data){
-                var data = JSON.parse(data);
-            }
         });
-    }
+        getData();
+    });
 </script>
 </body>
 </html>

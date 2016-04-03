@@ -81,7 +81,7 @@ body {
 	cursor: pointer;
 	display: inline-block;
 	height: 48px;
-	margin: 0px 12px 0 16px;*/
+	margin: 0px 12px 0 16px;
 	position: relative;
 	width: 48px;
 	-webkit-border-radius: 50%;
@@ -144,6 +144,7 @@ body {
 	text-align: justify;
 	color: #282828;
 	padding: 25px 0;
+    min-height: 130px;
 }
 
 .text_box:first-letter {
