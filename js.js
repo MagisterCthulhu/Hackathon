@@ -1,5 +1,5 @@
 function goOut () {
-	var x = document.getElementsByClassName("shadow");
+	var x = document.getElementsByClassName("upper");
 	x[0].classList.add('goOut');
 	var y = document.getElementsByClassName("arrowBack");
 	window.setTimeout(function(){
