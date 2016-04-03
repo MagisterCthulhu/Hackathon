@@ -73,9 +73,9 @@
 </div>
     <div class="sharing">
         <a onclick="Share.facebook('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','http://h3.itech-test.ru/images/yasdelyal.jpg','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/facebook.png"></a>
-        <a onclick="Share.twitter('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ'), 'http://h3.itech-test.ru/images/yasdelyal.jpg'"><img src="images/twitter.png"></a>
-        <a onclick="Share.mailru('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','http://h3.itech-test.ru/images/yasdelyal.jpg,'ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/mailru.png"></a>
-        <a onclick="Share.odnoklassniki('http://h3.itech-test.ru/','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ'), ''http://h3.itech-test.ru/images/yasdelyal.jpg''"><img src="images/odnoklassniki.png"></a>
+        <a onclick="Share.twitter('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ', 'http://h3.itech-test.ru/images/yasdelyal.jpg')"><img src="images/twitter.png"></a>
+        <a onclick="Share.mailru('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','http://h3.itech-test.ru/images/yasdelyal.jpg','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/mailru.png"></a>
+        <a onclick="Share.odnoklassniki('http://h3.itech-test.ru/','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ', 'http://h3.itech-test.ru/images/yasdelyal.jpg')"><img src="images/odnoklassniki.png"></a>
         <a onclick="Share.vkontakte('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','http://h3.itech-test.ru/images/yasdelyal.jpg','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/vkontakte.png"></a>
     </div>
 <div class="footer"><!--ПОДВАЛ-->
