@@ -51,6 +51,7 @@ body {
 	-moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 	-o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	background: black;
 }
 
 #slide1:checked ~ .slider > .slide1,
@@ -80,14 +81,14 @@ body {
 	cursor: pointer;
 	display: inline-block;
 	height: 48px;
-	margin: 25px 12px 0 16px;
+	margin: 0px 12px 0 16px;*/
 	position: relative;
 	width: 48px;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
-
+	border: 2px solid black;
 }
 
 .wrapper label:hover, 
@@ -99,11 +100,8 @@ body {
 }
 
 .wrapper label {
-	background-image:url(http://habrastorage.org/files/3f2/628/bd5/3f2628bd58c8452db516195cb0c9bfc9.jpg);
-	background-repeat: no-repeat;
-	background-size: 200%;
 }
-
+/*
 label[for="slide1"] {
   	background-image: url(images/maxresdefault.jpg);
 }
@@ -117,9 +115,10 @@ label[for="slide3"] {
 }
 
 label[for="slide4"] {
-  	background-image: url(images/3.jpg);
+	background-repeat: no-repeat;
+  	background-image: url(images/youtube-1.png);
 }
-
+*//*
 .wrapper label:after {
 	content: " ";
 	display: block;
@@ -130,11 +129,7 @@ label[for="slide4"] {
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-}
+}*/
 
 .shadow {
 	position: absolute;
@@ -270,4 +265,15 @@ label[for="slide4"] {
 img {
 	width: inherit;
 	height: inherit;
+	transform: translateX(-2px) translateY(-2px);
+	padding: 2px;
+}
+
+iframe {
+	width: inherit;
+	height: 640px;
+}
+
+.mini {
+	border-radius: 50%;
 }
