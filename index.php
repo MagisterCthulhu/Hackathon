@@ -74,6 +74,11 @@
 </div>
 <div class="footer"><!--ПОДВАЛ-->
     <a href="Admin-LogIn.php"><img src="images/lock.png" class="lock"></a>
+    <a onclick="Share.vkontakte('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','IMG_PATH','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/vkontakte.png"></a>
+    <a onclick="Share.facebook('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','IMG_PATH','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/facebook.png"></a>
+    <a onclick="Share.mailru('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','IMG_PATH','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/mailru.png"></a>
+    <a onclick="Share.odnoklassniki('http://h3.itech-test.ru/','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/odnoklassniki.png"></a>
+    <a onclick="Share.twitter('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ')"><img src="images/twitter.png"></a>
 </div>
 <script type="text/javascript">
     $(window).load(function() {
