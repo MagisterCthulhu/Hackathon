@@ -116,8 +116,6 @@ class DB {
         $pic3 = "'".$pic3."'";
         $pic4 = "'".$pic4."'";
 
-
-
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
@@ -134,5 +132,39 @@ class DB {
         $pdo = new PDO($dsn,$user,$password);
         $str = $pdo->query("SELECT * FROM content");
         return $str;
+    }
+    function Delete($id)
+    {
+        $dsn = 'mysql:host=localhost;dbname=tuniverse';
+        $user = 'root';
+        $password = '';
+        $pdo = new PDO($dsn,$user,$password);
+        $str = $pdo->query("DELETE FROM content WHERE id =".$id);
+    }
+    function SelectID($id)
+    {
+        $dsn = 'mysql:host=localhost;dbname=tuniverse';
+        $user = 'root';
+        $password = '';
+        $pdo = new PDO($dsn,$user,$password);
+        $str = $pdo->query("SELECT * FROM content WHERE id =4" );
+        return $str;
+    }
+    function Update($name,$text,$videosrc,$picbackground,$pic1,$pic2,$pic3,$pic4,$date,$id)
+    {
+        $name = "'".$name."'";
+        $text = "'".$text."'";
+        $videosrc = "'".$videosrc."'";
+        $picbackground = "'".$picbackground."'";
+        $pic1 = "'".$pic1."'";
+        $pic2 = "'".$pic2."'";
+        $pic3 = "'".$pic3."'";
+        $pic4 = "'".$pic4."'";
+
+        $dsn = 'mysql:host=localhost;dbname=tuniverse';
+        $user = 'root';
+        $password = '';
+        $pdo = new PDO($dsn,$user,$password);
+        $pdo->query("UPDATE content SET name =".$name.", text = ".$text. ", videosrc = ".$videosrc.", picbackground =".$picbackground.", pic1 =".$pic1. ", pic2 = ".$pic2.", pic3 = ".$pic3.", pic4 = ".$pic4. ", date =".$date."  WHERE content.id =".$id );
     }
 }
