@@ -158,7 +158,13 @@ class DB {
         $password = '';
         $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT * FROM content WHERE id =".$id );
-        return $str;
+
+        $data = array();
+
+        foreach($str as $row){
+            $data =  $row;
+        }
+        return $data;
     }
     function Update($name,$text,$videosrc,$picbackground,$pic1,$pic2,$pic3,$pic4,$date,$id)
     {

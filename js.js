@@ -26,3 +26,8 @@ function getOverHere () {
 	var y = document.getElementsByClassName("visible");
 	y[0].classList.remove('visible');
 }
+
+function getIdSelection () {
+    var x = document.getElementsByClassName("selected");
+    return x[0].parentNode.id;
+}

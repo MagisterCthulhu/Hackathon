@@ -49,14 +49,14 @@
             if($first ==0)
         {
                 echo "<li id =".$row['id'].">";
-                echo "<div class=\"item selected\" onclick = \"selectItem(this)\" ></div>";
+                echo "<div class=\"item selected\" onclick = \"selectItem(this);getContent(this);\" ></div>";
                 echo "<div class=\"dateBlock\" >" . $row['date']."</div >";
                 echo "</li >";
                 $first = 1;
         }
             else{
             echo "<li id =" . $row['id'] . ">";
-            echo "<div class=\"item\" onclick = \"selectItem(this)\" ></div>";
+            echo "<div class=\"item\" onclick = \"selectItem(this);getContent(this);\" ></div>";
             echo "<div class=\"dateBlock\" >" . $row['date'] . "</div >";
             echo "</li >";
         }
@@ -66,12 +66,14 @@
     <div class="clearout"></div>
 </div>
 <div class="text_box">
-    <?php
+    <p><?php
     foreach($data as $row)
     {
-        echo $row['text'];
+        $d = new DB();
+        $d = $d->GetText(2);
+        echo $d;
     }
-    ?>
+    ?></p>
 </div>
 <div class="footer"><!--ПОДВАЛ-->
     <a href="Admin-LogIn.php"><img src="images/lock.png" class="lock"></a>
@@ -84,6 +86,15 @@
             clone:false
         })
     });
+
+    function getContent(){
+        $.ajax({
+            url: 'ajax/getData.php?id=' + getIdSelection(),
+            success: function(data){
+                var data = JSON.parse(data);
+            }
+        });
+    }
 </script>
 </body>
 </html>

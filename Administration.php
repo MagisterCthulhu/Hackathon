@@ -26,7 +26,7 @@ if(!empty($_SESSION['name'])) {
     <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav affix-top">
             <li><a href="Add.php"><i class="icon-chevron-right"></i>Add new item to timeline</a></li>
-            <li><a href="index_2.html"><i class="icon-chevron-right"></i>Log out</a></li>
+            <li><a href="index.php"><i class="icon-chevron-right"></i>Log out</a></li>
 
         </ul>
     </div>
