@@ -316,3 +316,11 @@ iframe {
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+.sharing {
+	width: 200px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
