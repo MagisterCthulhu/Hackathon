@@ -49,29 +49,27 @@
         foreach($data as $row)
         {
             $str = $q->NumToString($row['date']);
-
             if($first ==0)
         {
-
                 echo "<li id =".$row['id'].">";
                 echo "<div class=\"item selected\" onclick = \"selectItem(this);getContent(this);\" ></div>";
                 echo "<div class=\"dateBlock\" >" . $str."</div >";
                 echo "</li >";
                 $first = 1;
         }
-            else{
+            else
+            {
             echo "<li id =" . $row['id'] . ">";
             echo "<div class=\"item\" onclick = \"selectItem(this);getContent(this);\" ></div>";
             echo "<div class=\"dateBlock\" >" . $str . "</div >";
             echo "</li >";
-        }
+            }
         }
         ?>
     </ul>
     <div class="clearout"></div>
 </div>
 <div class="text_box">
-
 </div>
     <div class="sharing">
         <a onclick="Share.facebook('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','http://h3.itech-test.ru/images/yasdelyal.jpg','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/facebook.png"></a>

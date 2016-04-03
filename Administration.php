@@ -53,10 +53,8 @@ if(!empty($_SESSION['name'])) {
                 echo "<td class=\"col-md-1\">".$row['date']."</td>>";
                 echo '<td class=\"col-md-1\"><a href="Update.php?id='.$row['id'].'"><button type="submit" class="btn btn-default" name="Update" ] >Update</button></a></td>';
                 echo '<td class=\"col-md-1\"><a href="Remove.php?id='.$row['id'].'"><button type="submit" class="btn btn-default" name="Delete">Delete</button></a></td>';
-
                 echo "</tr>";
             }
-
         ?>
         </tbody>
     </table>
@@ -64,7 +62,6 @@ if(!empty($_SESSION['name'])) {
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
 </body>
 </html>
 
