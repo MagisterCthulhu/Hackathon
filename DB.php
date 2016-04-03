@@ -12,7 +12,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT name FROM content WHERE id = ".$id);
         foreach ($str as $row)
         {
@@ -25,7 +25,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT text FROM content WHERE id = ".$id);
         foreach ($str as $row)
         {
@@ -37,7 +37,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT videosrc FROM content WHERE id = ".$id);
         foreach ($str as $row)
         {
@@ -49,7 +49,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT picbackground FROM content WHERE id = ".$id);
         foreach ($str as $row)
         {
@@ -61,7 +61,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT pic1 FROM content WHERE id = ".$id);
         foreach ($str as $row)
         {
@@ -73,7 +73,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT pic2 FROM content WHERE id = ".$id);
         foreach ($str as $row)
         {
@@ -85,7 +85,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT pic3 FROM content WHERE id = ".$id);
         foreach ($str as $row)
         {
@@ -97,7 +97,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT pic4 FROM content WHERE id = ".$id);
         foreach ($str as $row)
         {
@@ -119,7 +119,8 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
+        $pdo->exec("set names utf8");
         $st = "INSERT INTO content(name,text,videosrc,picbackground,pic1,pic2,pic3,pic4,date) VALUES( ".$name.",".$text.",".$videosrc.",".$picbackground.",".$pic1.",".$pic2.",".$pic3.",".$pic4.", ".$date.")";
         //print_r($st);
         $pdo->query($st);
@@ -129,7 +130,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("SELECT * FROM content");
         return $str;
     }
@@ -138,7 +139,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $str = $pdo->query("DELETE FROM content WHERE id =".$id);
     }
     function SelectID($id)
@@ -146,8 +147,8 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
-        $str = $pdo->query("SELECT * FROM content WHERE id =4" );
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
+        $str = $pdo->query("SELECT * FROM content WHERE id =".$id );
         return $str;
     }
     function Update($name,$text,$videosrc,$picbackground,$pic1,$pic2,$pic3,$pic4,$date,$id)
@@ -164,7 +165,7 @@ class DB {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
         $user = 'root';
         $password = '';
-        $pdo = new PDO($dsn,$user,$password);
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
         $pdo->query("UPDATE content SET name =".$name.", text = ".$text. ", videosrc = ".$videosrc.", picbackground =".$picbackground.", pic1 =".$pic1. ", pic2 = ".$pic2.", pic3 = ".$pic3.", pic4 = ".$pic4. ", date =".$date."  WHERE content.id =".$id );
     }
 }
