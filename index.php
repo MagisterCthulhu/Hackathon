@@ -26,7 +26,7 @@
         <div class="slides slide1"><img src=""></div>
         <div class="slides slide2"><img src=""></div>
         <div class="slides slide3"><img src=""></div>
-        <div class="slides slide4"><iframe src="" frameborder="0" allowfullscreen></iframe><!--<img src="images/3.jpg">--></img></div>
+        <div class="slides slide4"><iframe src="" frameborder="0" allowfullscreen></iframe></div>
     </div>
     <div class="controls">
         <label for="slide1"><img class="mini" src=""></label>
@@ -44,20 +44,24 @@
     <ul id="timeline">
         <?php
         $first = 0;
+
         foreach($data as $row)
         {
+            $str = $q->NumToString($row['date']);
+
             if($first ==0)
         {
+
                 echo "<li id =".$row['id'].">";
                 echo "<div class=\"item selected\" onclick = \"selectItem(this);getContent(this);\" ></div>";
-                echo "<div class=\"dateBlock\" >" . $row['date']."</div >";
+                echo "<div class=\"dateBlock\" >" . $str."</div >";
                 echo "</li >";
                 $first = 1;
         }
             else{
             echo "<li id =" . $row['id'] . ">";
             echo "<div class=\"item\" onclick = \"selectItem(this);getContent(this);\" ></div>";
-            echo "<div class=\"dateBlock\" >" . $row['date'] . "</div >";
+            echo "<div class=\"dateBlock\" >" . $str . "</div >";
             echo "</li >";
         }
         }
