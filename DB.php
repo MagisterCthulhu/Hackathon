@@ -134,6 +134,15 @@ class DB {
         $str = $pdo->query("SELECT * FROM content");
         return $str;
     }
+    function SelectAllOrdered()
+    {
+        $dsn = 'mysql:host=localhost;dbname=tuniverse';
+        $user = 'root';
+        $password = '';
+        $pdo = new PDO($dsn,$user,$password);$pdo->exec("set names utf8");
+        $str = $pdo->query("SELECT * FROM content ORDER BY date ASC");
+        return $str;
+    }
     function Delete($id)
     {
         $dsn = 'mysql:host=localhost;dbname=tuniverse';
