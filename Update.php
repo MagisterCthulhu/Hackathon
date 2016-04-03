@@ -24,7 +24,6 @@ if(!empty($_SESSION['name']))
         header ('Location: Administration.php');
         exit();
     }
-
 }
 else{
     header ('Location: Admin-LogIn.php');
@@ -56,27 +55,27 @@ else{
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Введите текст темы</label>
-                <textarea class="form-control" name="text" placeholder="*Обязательное поля для заполнения" ><?php echo $_text; ?></textarea>
+                <textarea class="form-control" name="text" placeholder="*Обязательное поля для заполнения" ><?=$_text; ?></textarea>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Ссылка на видеоресурс</label>
-                <input type="text" name="videosrc" class="form-control" id="exampleInputEmail1" value="<?php echo $_videosrc; ?>" >
+                <input type="text" name="videosrc" class="form-control" id="exampleInputEmail1" value="<?=$_videosrc; ?>" >
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Ссылка на изображение темы №1</label>
-                <input type="text" name="pic1" class="form-control" id="exampleInputEmail1" value="<?php echo $_pic1;?> ">
+                <input type="text" name="pic1" class="form-control" id="exampleInputEmail1" value="<?=$_pic1;?> ">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Ссылка на изображение темы №2</label>
-                <input type="text" name="pic2" class="form-control" id="exampleInputPassword1" value="<?php echo $_pic2;?>">
+                <input type="text" name="pic2" class="form-control" id="exampleInputPassword1" value="<?=$_pic2;?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Ссылка на изображение темы №3</label>
-                <input type="text" name="pic3" class="form-control" id="exampleInputEmail1" value="<?php echo $_pic3;?>">
+                <input type="text" name="pic3" class="form-control" id="exampleInputEmail1" value="<?=$_pic3;?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Дата события</label>
-                <input type="text" name="date" class="form-control" id="exampleInputPassword1" placeholder="*Обязательное поле для заполнения" value="<?php echo $_date;?>">
+                <input type="text" name="date" class="form-control" id="exampleInputPassword1" placeholder="*Обязательное поле для заполнения" value="<?=$_date;?>">
             </div>
             <button type="submit" class="btn btn-default">Принять</button>
         </form>

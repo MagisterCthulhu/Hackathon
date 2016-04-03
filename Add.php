@@ -6,7 +6,6 @@ if(!empty($_SESSION['name']))
     {
         if(isset($_POST['name']) && isset($_POST['text']) )
         {
-            //echo $_POST['name'];
             $q = new DB();
             $q->PutData($_POST['name'],$_POST['text'],$_POST['videosrc'],$_POST["pic1"],$_POST["pic2"],$_POST["pic3"],$_POST["date"]);
             header ('Location: Administration.php');
@@ -32,11 +31,9 @@ else{
 </head>
 <body>
 <h1 align="center">Добавление нового события</h1>
-
 <div class="container">
     <form method="post" align="center" class="form-signin">
         <form role="form">
-
             <div class="form-group">
                 <label for="usr">Введите заголовок темы</label>
                 <input type="text" name="name" class="form-control"  placeholder="*Обязательное поля для заполнения">
@@ -72,6 +69,5 @@ else{
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
 </body>
 </html>

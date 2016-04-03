@@ -49,36 +49,34 @@
         foreach($data as $row)
         {
             $str = $q->NumToString($row['date']);
-
             if($first ==0)
         {
-
                 echo "<li id =".$row['id'].">";
                 echo "<div class=\"item selected\" onclick = \"selectItem(this);getContent(this);\" ></div>";
                 echo "<div class=\"dateBlock\" >" . $str."</div >";
                 echo "</li >";
                 $first = 1;
         }
-            else{
+            else
+            {
             echo "<li id =" . $row['id'] . ">";
             echo "<div class=\"item\" onclick = \"selectItem(this);getContent(this);\" ></div>";
             echo "<div class=\"dateBlock\" >" . $str . "</div >";
             echo "</li >";
-        }
+            }
         }
         ?>
     </ul>
     <div class="clearout"></div>
 </div>
 <div class="text_box">
-
 </div>
     <div class="sharing">
-        <a onclick="Share.facebook('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','IMG_PATH','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/facebook.png"></a>
-        <a onclick="Share.twitter('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ')"><img src="images/twitter.png"></a>
-        <a onclick="Share.mailru('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','IMG_PATH','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/mailru.png"></a>
-        <a onclick="Share.odnoklassniki('http://h3.itech-test.ru/','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/odnoklassniki.png"></a>
-        <a onclick="Share.vkontakte('http://h3.itech-test.ru/','ЯСДЕЛЯЛЬ','IMG_PATH','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/vkontakte.png"></a>
+        <a onclick="Share.facebook('http://h3.itech-test.ru/','Follow Hackathon!!!','IMG_PATH','Code, coffee, rock'n'roll')"><img src="images/facebook.png"></a>
+        <a onclick="Share.twitter('http://h3.itech-test.ru/','Follow Hackathon!!!')"><img src="images/twitter.png"></a>
+        <a onclick="Share.mailru('http://h3.itech-test.ru/','Follow Hackathon!!!','IMG_PATH','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/mailru.png"></a>
+        <a onclick="Share.odnoklassniki('http://h3.itech-test.ru/','Follow Hackathon!!!, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/odnoklassniki.png"></a>
+        <a onclick="Share.vkontakte('http://h3.itech-test.ru/','Follow Hackathon!!!','IMG_PATH','ХАКАТОН, КОФЕ, ТАНЦЫ С БУБНАМИ')"><img src="images/vkontakte.png"></a>
     </div>
 <div class="footer"><!--ПОДВАЛ-->
     <a href="Admin-LogIn.php"><img src="images/lock.png" class="lock"></a>
