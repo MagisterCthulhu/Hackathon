@@ -72,7 +72,7 @@ body {
 
 .wrapper .controls {
 	left: 50%;
-	transform: translateX(-50%) translateY(-177px);
+	transform: translateX(-50%) translateY(-155px);
 	position: absolute;
 	z-index: 3;
 }
@@ -98,38 +98,6 @@ body {
 #slide4:checked ~ .controls label:nth-of-type(4) {
 	border: 2px solid green;
 }
-
-.wrapper label {
-}
-/*
-label[for="slide1"] {
-  	background-image: url(images/maxresdefault.jpg);
-}
-
-label[for="slide2"] {
-  	background-image: url(images/1.jpg);
-}
-
-label[for="slide3"] {
-  	background-image: url(images/2.jpg);
-}
-
-label[for="slide4"] {
-	background-repeat: no-repeat;
-  	background-image: url(images/youtube-1.png);
-}
-*//*
-.wrapper label:after {
-	content: " ";
-	display: block;
-	height: 48px;
-	position: absolute;
-	width: 48px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	border-radius: 50%;
-}*/
 
 .shadow {
 	position: absolute;
